@@ -1,0 +1,58 @@
+{
+  "swagger": "2.0",
+  "info": {
+    "title": "",
+    "description": "",
+    "version": "1.0"
+  },
+  "produces": ["application/json"],
+  "host": "localhost:8000",
+  "basePath": "/api/swagger/v1",
+  "paths": {
+    "/users": {
+      "get": {
+        "x-swagger-router-controller": "middleware-name1",
+        "operationId": "swagTest",
+        "tags": ["Usuarios"],
+        "description": "",
+        "parameters": [],
+        "responses": {}
+      },
+      "post": {
+        "x-swagger-router-controller": "middleware-name2",
+        "operationId": "swagTest2",
+        "tags": ["Usuarios"],
+        "description": "Agregar un nuevo usuario",
+        "parameters": [
+          {
+            "name": "nombre",
+            "in": "formData",
+            "required": true,
+            "type": "string",
+            "description": "Nombre del usuario"
+          },
+          {
+            "name": "apellido",
+            "in": "formData",
+            "required": true,
+            "type": "string",
+            "description": "Apellido del usuario"
+          },
+          {
+            "name": "correo",
+            "in": "formData",
+            "required": true,
+            "type": "string",
+            "format": "email",
+            "description": "Correo electrónico del usuario"
+          }
+    
+        ],
+        "responses": {}
+      }
+    }
+
+
+
+  }
+}
